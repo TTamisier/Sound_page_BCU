@@ -1,0 +1,103 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+}
+
+body {
+  background-size: 6px 6px !important;
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0) 46%, coral 49%, coral 51%, rgba(0, 0, 0, 0) 55%);
+  background-color: white;
+
+  font-family: sans-serif;
+}
+
+#bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), 
+              radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+              background-blend-mode: multiply,multiply;
+  display: flex;
+}
+
+.audio-player {
+  width: 450px;
+  padding: 25px 20px 25px 20px;
+  margin: auto;
+  background-color: white;
+  border: 2px solid black;
+  align-items: center;
+  box-shadow: 10px 10px 0px rgb(51, 51, 51);
+
+}
+
+.audio-player .player-controls {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.audio-player #playAudio {
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  background: url("play.svg") no-repeat center;
+  background-size: contain;
+}
+
+.audio-player #playAudio.pause {
+  background: url("pause-button.svg") no-repeat center;
+  background-size: contain;
+}
+
+.audio-player p {
+  margin: 0 0 0 5px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.audio-player p small {
+  font-size: 20px;
+}
+
+.audio-player #seekObjContainer {
+  position: relative;
+  width: 290px;
+  margin: 0 5px;
+  height: 20px;
+  
+}
+
+.audio-player #seekObjContainer #seekObj {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #e3e3e3;
+  border: 1px solid black;
+}
+
+.audio-player #seekObjContainer #seekObj #percentage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: coral;
+
+}
+/*# sourceMappingURL=sass.css.map */
